@@ -445,6 +445,7 @@ static int fw_decompress_xz(struct device *dev, struct fw_priv *fw_priv,
 static char fw_path_para[256];
 static const char * const fw_path[] = {
 	fw_path_para,
+	"/vendor/etc/firmware"
 	"/vendor/firmware",
 	"/vendor/firmware_mnt/image",
 	"/firmware/image",
