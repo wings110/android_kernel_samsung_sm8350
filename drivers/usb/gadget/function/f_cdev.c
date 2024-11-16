@@ -1617,7 +1617,6 @@ static long f_cdev_ioctl(struct file *fp, unsigned int cmd,
 	int i = 0;
 	uint32_t val;
 	struct f_cdev *port;
-	unsigned long flags;
 
 	port = fp->private_data;
 	if (!port) {
@@ -1639,13 +1638,11 @@ static long f_cdev_ioctl(struct file *fp, unsigned int cmd,
 		break;
 	case TIOCMGET:
 		pr_debug("TIOCMGET on port(%s)%pK\n", port->name, port);
-		spin_lock_irqsave(&port->port_lock, flags);
 		ret = f_cdev_tiocmget(port);
 		if (ret >= 0) {
 			ret = put_user(ret, (uint32_t *)arg);
 			port->cbits_updated = false;
 		}
-		spin_unlock_irqrestore(&port->port_lock, flags);
 		break;
 	default:
 		pr_err("Received cmd:%d not supported\n", cmd);
@@ -1661,7 +1658,6 @@ static void usb_cser_notify_modem(void *fport, int ctrl_bits)
 	int temp;
 	struct f_cdev *port = fport;
 	struct cserial *cser;
-	unsigned long flags;
 
 	cser = &port->port_usb;
 	if (!port) {
@@ -1676,7 +1672,6 @@ static void usb_cser_notify_modem(void *fport, int ctrl_bits)
 	if (temp == port->cbits_to_modem)
 		return;
 
-	spin_lock_irqsave(&port->port_lock, flags);
 	port->cbits_to_modem = temp;
 	port->cbits_updated = true;
 
@@ -1691,7 +1686,6 @@ static void usb_cser_notify_modem(void *fport, int ctrl_bits)
 			cser->send_modem_ctrl_bits(cser, cbits_to_laptop);
 	}
 
-	spin_unlock_irqrestore(&port->port_lock, flags);
 	wake_up(&port->read_wq);
 }
 
@@ -1952,7 +1946,7 @@ static struct f_cdev *f_cdev_alloc(char *func_name, int portno)
 	port->dev.parent = NULL;
 	port->dev.release = cdev_device_release;
 	port->dev.devt = MKDEV(major, port->minor);
-	dev_set_name(&port->dev, port->name);
+	dev_set_name(&port->dev, "%s", port->name);
 	ret = cdev_device_add(&port->fcdev_cdev, &port->dev);
 	if (ret) {
 		pr_err("Failed to add cdev for port(%s)\n", port->name);
