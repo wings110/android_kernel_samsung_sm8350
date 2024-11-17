@@ -246,6 +246,7 @@ source "drivers/nfc/nfc_logger/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SU
 source "drivers/battery/charger/max77705_charger/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
 source "drivers/net/dropdump/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
 source "drivers/security/samsung/five_tee_driver/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
+source "drivers/uwb/uwb_logger/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
 source "drivers/muic/common/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
 source "drivers/sti/common/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
 source "drivers/input/input_boost/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
@@ -266,6 +267,7 @@ source "drivers/nfc/snvm/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
 source "drivers/battery/wireless/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
 source "drivers/input/misc/hall/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
 source "drivers/regulator/s2mpb02/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
+source "drivers/regulator/s2dos05/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
 source "drivers/hwmon/sec_thermistor/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
 source "drivers/mfd/maxim/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
 source "drivers/battery/common/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
