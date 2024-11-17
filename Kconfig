@@ -42,4 +42,7 @@ source "techpack/display/msm/samsung/S6E3FAB_AMB624XT01/Kconfig" # ADDED BY LEGO
 #t2q
 source "techpack/display/msm/samsung/S6E3HAB_AMB677TY01/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
 source "techpack/display/msm/samsung/S6E3FAB_AMB667XU01/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
+#p3q
+source "techpack/display/msm/samsung/S6E3HAB_AMB677TY01/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
+source "techpack/display/msm/samsung/S6E3HAD_AMB681XV01/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
 source "techpack/display/msm/samsung/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
