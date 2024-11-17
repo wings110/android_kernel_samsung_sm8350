@@ -276,4 +276,7 @@ source "drivers/usb/typec/maxim/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT S
 # o1q
 source "drivers/pwm/pwm-gpclk/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
 source "drivers/vibrator/maxim/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
+# p3q
+source "drivers/input/wacom/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
+source "drivers/sensors/vl53l5/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
 endmenu
