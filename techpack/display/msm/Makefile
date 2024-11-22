@@ -200,6 +200,23 @@ msm_drm-$(CONFIG_PANEL_S6E3HAB_AMB677TY01_WQHD) += samsung/S6E3HAB_AMB677TY01/ss
 msm_drm-$(CONFIG_PANEL_S6E3HAD_AMB681XV01_WQHD) += samsung/S6E3HAD_AMB681XV01/ss_dsi_panel_S6E3HAD_AMB681XV01.o
 endif
 
+ifeq ($(CONFIG_SEC_B2Q_PROJECT), y)
+msm_drm-$(CONFIG_DISPLAY_SAMSUNG) += samsung/PBA_BOOTING_DSI1/ss_dsi_panel_PBA_BOOTING_fhd_dsi1.o
+
+msm_drm-$(CONFIG_PANEL_S6E36W3_AMB114EU09_116X300) += samsung/S6E36W3_AMB114EU09/ss_dsi_interpolation_S6E36W3_AMB114EU09.o \
+	samsung/S6E36W3_AMB114EU09/ss_dsi_panel_S6E36W3_AMB114EU09.o \
+	samsung/S6E36W3_AMB114EU09/ss_dsi_smart_dimming_S6E36W3_AMB114EU09.o
+
+msm_drm-$(CONFIG_PANEL_S6E3HA9_AMF670UH01_FHD) += samsung/S6E3HA9_AMF670UH01/ss_dsi_interpolation_S6E3HA9_AMF670UH01.o \
+	samsung/S6E3HA9_AMF670UH01/ss_dsi_panel_S6E3HA9_AMF670UH01.o \
+	samsung/S6E3HA9_AMF670UH01/ss_dsi_smart_dimming_S6E3HA9_AMF670UH01.o
+
+
+msm_drm-$(CONFIG_PANEL_S6E3HAD_AMF670ZA01_FHD) += samsung/S6E3HAD_AMF670ZA01/ss_dsi_panel_S6E3HAD_AMF670ZA01.o
+
+msm_drm-$(CONFIG_PANEL_S6E36W3_AMB190ZB01_260X488) += samsung/S6E36W3_AMB190ZB01/ss_dsi_panel_S6E36W3_AMB190ZB01.o
+endif
+
 msm_drm-$(CONFIG_DISPLAY_SAMSUNG) += samsung/ss_dsi_panel_sysfs.o \
 	samsung/ss_dsi_panel_debug.o \
 	samsung/ss_dsi_panel_common.o \
