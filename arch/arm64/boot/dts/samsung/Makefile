@@ -6,6 +6,8 @@ else ifeq ($(filter y,$(CONFIG_SEC_T2Q_PROJECT)),y)
 dts-dirs += palette/t2q
 else ifeq ($(filter y,$(CONFIG_SEC_P3Q_PROJECT)),y)
 dts-dirs += palette/p3q
+else ifeq ($(filter y,$(CONFIG_SEC_B2Q_PROJECT)),y)
+dts-dirs += b2q/b2q
 endif
 
 always          := $(dtb-y)
