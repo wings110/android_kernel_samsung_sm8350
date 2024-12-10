@@ -29,6 +29,9 @@ elif [ "$DEVICE_MODEL" == "SM-G990B" ]; then
 elif [ "$DEVICE_MODEL" == "SM-G990B2" ]; then
     DEVICE_NAME="r9q2"
     DEFCONFIG=/r9q2_defconfig
+elif [ "$DEVICE_MODEL" == "SM-F926N" ]; then
+    DEVICE_NAME="q2q"
+    DEFCONFIG=/q2q_defconfig
 else
     echo "Config not found"
     exit
